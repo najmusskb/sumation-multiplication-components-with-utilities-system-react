@@ -2,10 +2,11 @@
 const addtodatabase=id=>{
 
     let ShoppingCart;
-    // get the shoping cart 
+    // get the shoping cart from local storage
     const storedcart =localStorage.getItem('shoping-cart');
     if(storedcart){
-ShoppingCart=JSON.parse(storedcart)    }
+    ShoppingCart=JSON.parse(storedcart)    }
+
 
     else{
         ShoppingCart={};
@@ -17,11 +18,7 @@ ShoppingCart=JSON.parse(storedcart)    }
         const newQuantity=(parseInt(quantity) + 1);
         ShoppingCart[id]=newQuantity;
         // localStorage.setItem(id, newQuantity);
-        
-
     }
-
-
     else{
         // console.log('new items')
         // localStorage.setItem(id,1);
@@ -30,4 +27,25 @@ ShoppingCart=JSON.parse(storedcart)    }
     localStorage.setItem('shoping-cart',JSON.stringify(ShoppingCart));
 }
 
-export {addtodatabase}
+
+
+const removefromDB=id=>{
+
+    console.log('inside fake Db')
+    const storedCart=localStorage.getItem('shoping-cart')
+    if(storedCart){
+        const shoppingCrt =JSON.parse(storedCart);
+        if(id in shoppingCrt){
+            delete shoppingCrt[id];
+            console.log('exist in the cart')
+        }
+
+    }
+
+
+    
+}
+
+
+
+export {addtodatabase,removefromDB}
