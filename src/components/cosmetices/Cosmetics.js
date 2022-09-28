@@ -29,10 +29,9 @@ const Cosmetics = () => {
       "name": "Stefanie Zimmerman"
     }
   ]
-
     return (
         <div>
-        <h1>okkkkkkkkkk</h1>
+        <h1>Data Load</h1>
         {
             Cosmeties.map(cosmetic=> <Cosmeticprops cos= {cosmetic}></Cosmeticprops>)
         }
