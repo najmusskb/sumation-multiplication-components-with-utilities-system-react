@@ -34,7 +34,7 @@ const Cosmetics = () => {
         <div>
         <h1>okkkkkkkkkk</h1>
         {
-            Cosmeties.map(Cosmetic=> <Cosmeticprops></Cosmeticprops>)
+            Cosmeties.map(cosmetic=> <Cosmeticprops cos= {cosmetic}></Cosmeticprops>)
         }
         </div>
 

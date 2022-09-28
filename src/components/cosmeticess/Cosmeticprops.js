@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Cosmeticprops = (props) => {
-    const {name, price, id}=props.Cosmetic;
+const Cosmeticprops = ({cos}) => {
+    const {name, price, id}=cos;
     return (
         <div>
 
